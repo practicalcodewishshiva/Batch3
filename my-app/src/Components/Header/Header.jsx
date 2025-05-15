@@ -16,6 +16,7 @@ import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import Delivery from "../Delivery/Delivery";
+import CustomModal from "../ReusableComponents/CustomModal";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -66,6 +67,8 @@ export default function Header(props) {
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+
+  const [modalTrack, setModalTrack] = React.useState(false);
 
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -158,6 +161,17 @@ export default function Header(props) {
     </Menu>
   );
 
+  function modalOpenClick() {
+    setModalTrack(true);
+  }
+
+  function modalCloseClick() {
+    setModalTrack(false);
+  }
+ const [openModal, setOpenModal] = React.useState(false);
+
+  const handleOpen = () => setOpenModal(true);
+  const handleClose = () => setOpenModal(false);
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -223,6 +237,7 @@ export default function Header(props) {
               <AccountCircle />
             </IconButton>
           </Box>
+          <button onClick={modalOpenClick}>Login </button>
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -237,6 +252,11 @@ export default function Header(props) {
           </Box>
         </Toolbar>
       </AppBar>
+      <CustomModal
+        modalTrack={modalTrack}
+        modalOpenClick={modalOpenClick}
+        modalCloseClick={modalCloseClick}
+      />
       {renderMobileMenu}
       {renderMenu}
     </Box>

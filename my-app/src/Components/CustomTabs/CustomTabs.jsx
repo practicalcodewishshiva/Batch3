@@ -7,6 +7,7 @@ import Box from "@mui/material/Box";
 import Milk from "../Milk/Milk";
 import Bread from "../Bread/Bread";
 import Eggs from "../Eggs/Eggs";
+import Footer from "../Footer/Footer";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -59,7 +60,7 @@ export default function CustomTabs({ userName,location, heroName }) {
           value={value}
           onChange={handleChange}
           aria-label="Vertical tabs example"
-          sx={{ borderRight: 1, borderColor: "divider" }}
+          sx={{ borderRight: 1, borderColor: "divider", minWidth: "100px", minHeight:"100vh" }}
         >
           <Tab label="Milk" {...a11yProps(0)} />
           <Tab label="Bread" {...a11yProps(1)} />
@@ -79,7 +80,7 @@ export default function CustomTabs({ userName,location, heroName }) {
         <Eggs/>
         </TabPanel>
         <TabPanel value={value} index={3}>
-          Item Four
+           <Footer/>
         </TabPanel>
         <TabPanel value={value} index={4}>
           Item Five
@@ -91,6 +92,7 @@ export default function CustomTabs({ userName,location, heroName }) {
           Item Seven
         </TabPanel>
       </Box>
+      
     </>
   );
 }
