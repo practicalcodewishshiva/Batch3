@@ -8,6 +8,9 @@ import Header from "./Components/Header/Header";
 import { Grid } from "@mui/material";
 import DashBoard from "./Components/DashBoard/DashBoard";
 import Delivery from "./Components/Delivery/Delivery";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Women from "./Components/Women/Women";
+import LoginPage from "./Components/LoginPage/LoginPage";
 
 function App() {
   const name = "Mounika";
@@ -22,10 +25,14 @@ function App() {
   };
   return (
     <>
-      <Header userDetails={userDetails} />
-      
-      <DashBoard heroName={heroName} />
-    
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LoginPage />} />
+          <Route path="/shop" element={<Header userDetails={userDetails} />} />
+          <Route path="/dashboard" element={<DashBoard heroName={heroName} />} />
+          <Route path="/women" element={<Women />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
@@ -63,7 +70,6 @@ export default App;
 // row col 4 col 4 col 4
 
 // flex layout
-
 
 // useContext 1%  login application ne useranme
 // Redux

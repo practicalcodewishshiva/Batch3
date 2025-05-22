@@ -22,10 +22,10 @@ export default function CustomModal({
   modalCloseClick,
 }) {
   const [phoneNumber, updatePhoneNumber] = React.useState("")
-  console.log("modalTrack", modalTrack);
 
   function capturePhoneNumber(event) {
     updatePhoneNumber(event.target.value)
+    console.log(phoneNumber,"phoneNumber")
   }
 
   function showCapturePhoneNumberEnteredValue(){
