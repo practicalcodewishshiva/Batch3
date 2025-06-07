@@ -4,6 +4,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import "../ReusableComponents/CustomModal.css";
+import axios from "axios";
 const style = {
   position: "absolute",
   top: "50%",
@@ -21,16 +22,91 @@ export default function CustomModal({
   modalOpenClick,
   modalCloseClick,
 }) {
-  const [phoneNumber, updatePhoneNumber] = React.useState("")
+  const [phoneNumber, updatePhoneNumber] = React.useState("");
 
   function capturePhoneNumber(event) {
-    updatePhoneNumber(event.target.value)
-    console.log(phoneNumber,"phoneNumber")
+    updatePhoneNumber(event.target.value);
+    console.log(phoneNumber, "phoneNumber");
   }
 
-  function showCapturePhoneNumberEnteredValue(){
-    console.log("clicked", phoneNumber)
+   function promiseExample() {
+    return new Promise((resolve, reject) => {
+      // fetch
+      // axios
+      axios.get("https://jsonplaceholder.typicode.com/todos")
+        .then((res) => {
+          console.log(resolve("data fetched succesflly", res));
+        })
+        .catch((err) => alert(err));
+    });
   }
+
+  
+  function showCapturePhoneNumberEnteredValue() {
+    promiseExample();
+  }
+
+  // callbacks
+  // promises
+  // async await
+
+  // synchinous based language
+
+  // order chicken biriayni    30 mins  callback once biryani
+  // I will call u back
+
+  // function getorderSomething(getBiriyani) {
+  //   if (time > 30) {
+  //     getBiriyani;
+  //   }
+
+  //   ("coffee ");
+  //   ("mesage");
+  // }
+
+  // function getBiriyani() {
+  //   return "proceessing";
+  // }
+
+  // const arr = [
+  //   {
+  //     name: "shiva",
+  //   },
+  // ];
+
+  // arr.map(copyOfarray=>{
+  //   return copyOfarray.title
+  // })
+
+  // getorderSomething();
+
+  // non blocking code execution
+  // chaitu
+  // same biriyani
+  // water bottle 2 mins
+  // mummy call chesinid 5 mins
+  // big boss 20 mins
+  // biriyani
+
+  // promises
+
+  // 3 states
+  // api call  ----------- rejec
+  // pending  state
+  // success state
+
+  // reject  state rejec
+
+  //  req 12th july ----- req ------
+
+  //api hit
+  // pending
+  // success
+  // reject
+
+ 
+
+
   return (
     <div>
       <Modal
@@ -72,7 +148,11 @@ export default function CustomModal({
               }}
             />
           </Typography>
-          <button class="button-3" role="button" onClick={showCapturePhoneNumberEnteredValue}>
+          <button
+            class="button-3"
+            role="button"
+            onClick={showCapturePhoneNumberEnteredValue}
+          >
             Continue
           </button>
         </Box>

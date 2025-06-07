@@ -1,40 +1,16 @@
-const milkProducts = [
-  {
-    productName: "Egg1",
-    ml: "500ml",
-    Price: 35,
-    gender: "male",
-    product: "Earrings",
-  },
-  {
-    productName: "Egg2",
-    ml: "500ml",
-    Price: 55,
-    gender: "female",
-  },
-  {
-    productName: "Egg3",
-    ml: "500ml",
-    Price: 75,
-    gender: "male",
-  },
-];
+// var name = "biriyani"; // creation
 
-console.log(milkProducts.length);
+// var name = "jilabi"; // update
+// console.log(name);
 
-const arr = [0, 1, 2];
+// let location = "spmething"; //creation
+// location = "hello updating"; // update
+// location = "tird time updation"; // third
 
-const arrOfObj = [
-  {
-    name: "tejasri",
-    loc: "hyd",
-  },
-   {
-    name: "Chaitu",
-    loc: "Bglre",
-  },
-  {
-    name: "Shiva",
-    loc: "us",
-  },
-];
+// console.log(location);
+
+// const productName = "Blinkit";
+
+// productName = "glunkit";
+
+// console.log(productName, "productName");

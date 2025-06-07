@@ -168,10 +168,29 @@ export default function Header(props) {
   function modalCloseClick() {
     setModalTrack(false);
   }
- const [openModal, setOpenModal] = React.useState(false);
+  const [openModal, setOpenModal] = React.useState(false);
 
   const handleOpen = () => setOpenModal(true);
   const handleClose = () => setOpenModal(false);
+
+  const [productValue, setProductValue] = React.useState(0);
+  const [productPrice, setProductPrice] = React.useState(0);
+
+  function handleAdd() {
+    setProductValue(productValue => {
+      return productValue + 1;
+    });
+    if (productValue) {
+      setProductPrice(productPrice => {
+        return productPrice + 60;
+      });
+    }
+  }
+  function handleDelete() {
+    setProductValue((productValue) => {
+      return productValue - 1;
+    });
+  }
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -205,6 +224,12 @@ export default function Header(props) {
 
             <Delivery />
           </Search>
+          <h3> Cart Value {productValue} items</h3>
+
+          <button onClick={handleAdd}>Add</button>
+          <button onClick={handleDelete}>Delete</button>
+
+          <h4> Product Price{productPrice}</h4>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <IconButton
@@ -237,6 +262,7 @@ export default function Header(props) {
               <AccountCircle />
             </IconButton>
           </Box>
+
           <button onClick={modalOpenClick}>Login </button>
           <Box sx={{ display: { xs: "flex", md: "none" } }}>
             <IconButton

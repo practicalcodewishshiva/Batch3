@@ -92,7 +92,14 @@ export default function CustomCard({ milkProducts }) {
     },
   ];
 
-  
+  // new Promse((resolve, reject) => {
+  //   if (dataSuccess) {
+  //     resolve("hey enjoy succefull data fetched");
+  //   } else {
+  //     reject("dta not fetched ");
+  //   }
+  // });
+
   async function getProductList() {
     const gowthamProductAPIurl = await axios.get(
       "https://fakestoreapi.com/products"
@@ -132,6 +139,7 @@ export default function CustomCard({ milkProducts }) {
                   <button className="add-blinkit" onClick={getProductList}>
                     ADD
                   </button>
+                  <button className="add-blinkit">Delete</button>
                 </div>
               </div>
             );
@@ -152,29 +160,34 @@ export default function CustomCard({ milkProducts }) {
 
 // ?    okavela vijay true : false
 
-
-
-
 // empty array []
 
 // const productList = [inside any data then only you can pass othwise always false];
 
-
-// if incase there is  no data immdiea error 
-// before code eexcute 
-// productList.length > 0 && productList.name 
-
+// if incase there is  no data immdiea error
+// before code eexcute
+// productList.length > 0 && productList.name
 
 // && true  true    true
 
 // || true or false  true
 
-// ? true or false 
-
-
-
-
-
+// ? true or false
 
 // display:grid;
 // grid-template-columns : repeat(4, 1fr)
+
+// js synchrouns based language
+
+// GlobalPhase
+
+// Memory creat
+
+// const name = "gowtham";
+// console.log(name)
+
+// const location  = "bagnalore"
+// console.log(location)
+
+// declaration
+// re -initilisation

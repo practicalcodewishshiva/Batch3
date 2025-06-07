@@ -26,8 +26,9 @@ function LoginPage() {
     if (phoneNumber === "sravanthi") {
       //    ikkada execute cheyu
       alert("sravanthi found");
-      navigate("/shop");
+      navigate("/Dashboard");
     } else {
+      navigate("/not-found");
       alert("sravanthi not found ");
     }
   }

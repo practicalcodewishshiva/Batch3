@@ -7,45 +7,38 @@ function Bread() {
       price: 200,
     },
     {
-        breadName: "Rashmika",
-        price: 600,
-      },
-      {
-        breadName: "Mrunal",
-        price: 800,
-      },
-      {
-        breadName: "Sandeep reddy vang",
-        price: 900,
-      },
+      breadName: "Rashmika",
+      price: 600,
+    },
+    {
+      breadName: "Mrunal",
+      price: 800,
+    },
+    {
+      breadName: "Sandeep reddy vang",
+      price: 900,
+    },
   ];
-
-
-
-
 
   return (
     <>
-      <CustomCard milkProducts={breadItems}/>
+      <CustomCard milkProducts={breadItems} />
     </>
   );
 }
 
 export default Bread;
 
+// 99%
 
-// 99% 
-
-// // if else 
+// // if else
 // 90%
 
 // // loops
 
 // TejaSri Frontend Dev CEO of Blinkit APplciation she will take everything from Frontend
 
-
-// Gowtham Backend devloper 
-
+// Gowtham Backend devloper
 
 // const breadItems = [
 //   {
@@ -71,8 +64,6 @@ export default Bread;
 
 // blinkit.com  display
 
-
-
 // api      /products
 
 // const breadItems = [
@@ -94,10 +85,9 @@ export default Bread;
 //     },
 // ];
 
-
 //                 /products
 // Frontend       blinkit ----------------> backend
-//                 <-------------------- 
+//                 <--------------------
 
 //                 const breadItems = [
 //                   {
@@ -118,12 +108,7 @@ export default Bread;
 //                     },
 //                 ];
 
-
-
-
-
-//                 Frontend to backend data request 
-
+//                 Frontend to backend data request
 
 //                 get    /productList
 
@@ -131,10 +116,60 @@ export default Bread;
 
 //                 put     /productList/id    update
 
-//                 delete    /productList/id 
+//                 delete    /productList/id
 
 // 2 ways librarys   axios react API CALL   99%
-// FETCH    inbuilt js 
+// FETCH    inbuilt js
 
+// frontend         ------        axios(middleware) -----              backend
 
-// frontend         ------        axios(middleware) -----              backend           
+// variables store var let const   90%
+// grid layout display first mock json, API Data
+// forms create data capturing send to backend (Login Forms)
+// react Js virtual dom , useState(api data )
+// API PROMISES VS CALLBACKS VS ASYNC AWAIT 50%
+// FUcNTIONS
+//modal pop up
+
+//  form capturing and async await still doubts
+
+// forms
+
+// oka data collect text number phone email address
+
+// Onchange
+
+// function handleUserName(event){
+//   // object
+//   event.target.value   // shiva
+
+//   // api provide www.tejasri.com/contact-form    2 things reject resolve
+//   promises states success state , failure state, pending state
+
+//   pending
+//   if(data==="success"){
+//     resolve(.then((dataRespnse)=>{
+//       .then((res)=>{
+//         state("some data")
+//       })
+//       .then()
+//       state(dataRespnse)
+//     }))
+//   } else if(data==="failure"){
+//     reject()
+//   }
+
+// async
+
+// await Response()
+// await rejection()
+
+// {
+//   pending:"",
+//   success:"data fetched",
+//   failure:"data not found"
+// }
+
+// }
+
+// <input type="text" onChange={handleUserName}/> s hi
